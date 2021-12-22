@@ -20,13 +20,13 @@ public class main3 {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         //批处理模式
-        env.setRuntimeMode(RuntimeExecutionMode.BATCH);
+//        env.setRuntimeMode(RuntimeExecutionMode.BATCH);
 
-        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
+//        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
 
 
 
-//        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env, EnvironmentSettings.inBatchMode());
+        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env, EnvironmentSettings.inBatchMode());
 
 // create a DataStream
         DataStream<Row> dataStream = env.fromElements(
